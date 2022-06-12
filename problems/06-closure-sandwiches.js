@@ -17,13 +17,15 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-function sandwichMaker(string) {
-  return function addIngredient(string);
+function sandwichMaker() {
+  let result = "One sandwich with tomato"
+  return function addIngredient(string) {
+    result += " and " + string;
+    return result;
+  }
 }
 
-function addIngredient(string) {
-  return "One sandwich with tomato and " + string;
-}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
