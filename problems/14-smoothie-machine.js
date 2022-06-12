@@ -22,7 +22,19 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// your code here
+function smoothieMachine() {
+  let result = "I'm having a smoothie with "
+  return function addIngredient(...strings) {
+    strings.forEach(function(ingredient, i) {
+     if (i !== strings.length - 1) {
+        result += ingredient +  " and ";
+      } else {
+        result += ingredient;
+      }
+    });
+    return result;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
